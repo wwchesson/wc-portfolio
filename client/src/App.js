@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from "react"
+import { Box, Typography, Card, CardMedia, CardContent, Grid, Container } from "@mui/material"
+
 
 function App() {
+  const [websites, setWebsites] = useState([])
+
+  useEffect(() => {
+    fetch("/websites")
+    .then(r => r.json())
+    .then((data) => setWebsites(data))
+  }, [])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <Box>
+      <Card id="welcome-card">
+        <CardContent >
+          <Typography >Welcome to Will's Portfolio</Typography>
+        </CardContent>
+      </Card>
+    </Box>
+
+    <Container maxWidth="md">
+    <Grid container spacing={4}>
+      {websites.map((website) => (
+        <Card>
+          <CardMedia>
+
+          </CardMedia>
+          <CardContent>
+            
+          </CardContent>
+        </Card>
+      ))}
+    </Grid>
+    </Container>
+
     </div>
   );
 }
