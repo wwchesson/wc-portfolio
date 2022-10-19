@@ -22,28 +22,31 @@ function App() {
 
   return (
     <div className="App">
-      <Box sx={{ marginBottom: "20px"}}>
+      <Box sx={{ marginBottom: "40px"}} >
         <Card id="welcome-card">
-          <CardContent>
-            <Typography>Welcome to Will's Portfolio</Typography>
+          <CardContent sx={{margin: "auto", display: "flex"}}>
+            <Typography variant="h3"  style={{color: "white"}}><strong>Welcome to Will's Portfolio</strong></Typography>
           </CardContent>
         </Card>
       </Box>
 
       <Container maxWidth="md">
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
             {websites.map((website) => (
               <Grid item xs={12} sm={6} md={4} >
-            <Card key={website.id} sx={{marginBottom: "30px"}}>
+            <Card key={website.id} sx={{marginBottom: "30px", marginLeft: "30px", height: "450px"}} style={{backgroundColor: "#adc4ad"}}>
               <CardMedia
                 component="img"
                 image={website.image}
                 height="250"
               ></CardMedia>
-              <CardContent>
+              <CardContent >
                 <a href={website.address} target="_blank">
-                  <Typography sx={{justifyContent: "center", display: "flex"}}>{website.name} App</Typography>
+                  <Typography sx={{justifyContent: "center", display: "flex"}}>{website.name}</Typography>
+                  
                 </a>
+                <br />
+                <Typography>{website.description}</Typography>
               </CardContent>
             </Card>
             </Grid>
