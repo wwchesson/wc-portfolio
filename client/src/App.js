@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <Box sx={{ marginBottom: "40px"}} >
+      <Box sx={{ marginBottom: "80px"}} >
         <Card id="welcome-card">
           <CardContent sx={{margin: "auto", display: "flex"}}>
             <Typography variant="h3"  style={{color: "white"}}><strong>Welcome to Will's Portfolio</strong></Typography>
@@ -34,7 +34,7 @@ function App() {
         <Grid container spacing={2}>
             {websites.map((website) => (
               <Grid item xs={12} sm={6} md={4} >
-            <Card key={website.id} sx={{marginBottom: "30px", marginLeft: "30px", height: "450px"}} style={{backgroundColor: "#adc4ad"}}>
+            <Card key={website.id} sx={{marginBottom: "225px", marginLeft: "30px", height: "450px"}} style={{backgroundColor: "#adc4ad"}}>
               <CardMedia
                 component="img"
                 image={website.image}
