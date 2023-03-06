@@ -1,0 +1,19 @@
+databases:
+  - name: chesson-portfolio
+    databaseName: chesson-portfolio
+    user: chesson-portfolio
+
+services:
+  - type: web
+    name: chesson-portfolio
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: chesson-portfolio
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
