@@ -8,6 +8,7 @@ import {
   Grid,
   Container,
   Button,
+  Link
 } from "@mui/material";
 import gawildlife from "./gawildlife.gif";
 
@@ -70,7 +71,8 @@ function App() {
                 sx={{
                   marginBottom: "225px",
                   marginLeft: "30px",
-                  height: "500px",
+                  height: "550px",
+                  justifyContent: "center",
                 }}
                 style={{ backgroundColor: "#adc4ad" }}
               >
@@ -79,22 +81,43 @@ function App() {
                   image={website.image}
                   height="250"
                 ></CardMedia>
-                <CardContent>
+                <CardContent sx={{justifyContent: "center", margin: "auto"}}>
                   {/* <a href={website.address} target="_blank"> */}
                   <Typography
                     sx={{ justifyContent: "center", display: "flex" }}
+                    variant="h6"
                   >
                     {website.name}
                   </Typography>
-                  <Button onClick={() => setGif(website.gif)}>
+                  <Card
+                    sx={{justifyContent: "center", marginTop: "10px", marginLeft: "50px", width: "110px", backgroundColor: "#adc4ad"}}
+                  >
+                    <Button style={{marginLeft: "20px", textTransform: "lowercase"}} onClick={() => setGif(website.gif)}>
                     <Typography
                       sx={{ justifyContent: "center", display: "flex" }}
                     >
                       See Gif
                     </Typography>
                   </Button>
+                  </Card>
+                  <br />
+                  <Card
+                    sx={{justifyContent: "center", marginLeft: "50px", width: "110px", backgroundColor: "#adc4ad"}}
+                  >
 
-                  {/* </a> */}
+                    <Button style={{marginLeft: "20px", textTransform: "lowercase"}}>
+                      <Link href={website.address}>
+                        live site
+                      </Link>
+                    {/* <Typography
+                      sx={{ justifyContent: "center", display: "flex" }}
+                    >
+                      Live Site
+                    </Typography> */}
+                  </Button>
+
+                  </Card>
+
                   <br />
                   <Typography>{website.description}</Typography>
                 </CardContent>
