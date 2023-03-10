@@ -37,16 +37,27 @@ function App() {
         <Card
           sx={{
             display: "flex",
-            height: "500px",
+            height: "400px",
             width: "500px",
             margin: "auto",
-            marginBottom: "50px",
+            marginBottom: "90px",
           }}
         >
-          <Button onClick={() => setGif(!gif)}>
-            <Typography>x</Typography>
-          </Button>
-          <CardMedia component="img" image={gif}></CardMedia>
+          <CardContent
+            style={{
+              backgroundImage: `url(${gif})`,
+              backgroundPosition: "center",
+              backgroundSize: "600px 400px",
+              backgroundRepeat: "no-repeat",
+              width: "100vw",
+            }}
+          >
+            <Card sx={{ display: "flex", height: "50px", width: "50px", justifyContent: "center", backgroundColor: "black", marginLeft: "420px"}}>
+              <Button onClick={() => setGif(!gif)}>
+                <Typography color="white"><strong>x</strong></Typography>
+              </Button>
+            </Card>
+          </CardContent>
         </Card>
       ) : null}
 
