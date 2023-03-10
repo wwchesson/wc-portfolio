@@ -34,8 +34,19 @@ function App() {
       </Box>
 
       {gif ? (
-        <Card sx={{display: "flex", height: "500px", width: "500px", margin: "auto", marginBottom: "50px"}}>
-          <CardMedia component="img" image={gawildlife}></CardMedia>
+        <Card
+          sx={{
+            display: "flex",
+            height: "500px",
+            width: "500px",
+            margin: "auto",
+            marginBottom: "50px",
+          }}
+        >
+          <Button onClick={() => setGif(!gif)}>
+            <Typography>x</Typography>
+          </Button>
+          <CardMedia component="img" image={gif}></CardMedia>
         </Card>
       ) : null}
 
@@ -64,7 +75,7 @@ function App() {
                   >
                     {website.name}
                   </Typography>
-                  <Button onClick={() => setGif(!gif)}>
+                  <Button onClick={() => setGif(website.gif)}>
                     <Typography
                       sx={{ justifyContent: "center", display: "flex" }}
                     >
