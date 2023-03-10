@@ -8,7 +8,7 @@ import {
   Grid,
   Container,
   Button,
-  Link
+  Link,
 } from "@mui/material";
 import gawildlife from "./gawildlife.gif";
 
@@ -53,9 +53,20 @@ function App() {
               width: "100vw",
             }}
           >
-            <Card sx={{ display: "flex", height: "50px", width: "50px", justifyContent: "center", backgroundColor: "black", marginLeft: "420px"}}>
+            <Card
+              sx={{
+                display: "flex",
+                height: "50px",
+                width: "50px",
+                justifyContent: "center",
+                backgroundColor: "black",
+                marginLeft: "420px",
+              }}
+            >
               <Button onClick={() => setGif(!gif)}>
-                <Typography color="white"><strong>x</strong></Typography>
+                <Typography color="white">
+                  <strong>x</strong>
+                </Typography>
               </Button>
             </Card>
           </CardContent>
@@ -81,7 +92,7 @@ function App() {
                   image={website.image}
                   height="250"
                 ></CardMedia>
-                <CardContent sx={{justifyContent: "center", margin: "auto"}}>
+                <CardContent sx={{ justifyContent: "center", margin: "auto" }}>
                   {/* <a href={website.address} target="_blank"> */}
                   <Typography
                     sx={{ justifyContent: "center", display: "flex" }}
@@ -90,33 +101,45 @@ function App() {
                     {website.name}
                   </Typography>
                   <Card
-                    sx={{justifyContent: "center", marginTop: "10px", marginLeft: "50px", width: "110px", backgroundColor: "#adc4ad"}}
+                    sx={{
+                      justifyContent: "center",
+                      marginTop: "10px",
+                      marginLeft: "50px",
+                      width: "110px",
+                      backgroundColor: "#adc4ad",
+                    }}
                   >
-                    <Button style={{marginLeft: "20px", textTransform: "lowercase"}} onClick={() => setGif(website.gif)}>
-                    <Typography
-                      sx={{ justifyContent: "center", display: "flex" }}
+                    <Button
+                      style={{ marginLeft: "20px", textTransform: "lowercase" }}
+                      onClick={() => setGif(website.gif)}
                     >
-                      See Gif
-                    </Typography>
-                  </Button>
+                      <Typography
+                        sx={{ justifyContent: "center", display: "flex" }}
+                      >
+                        See Gif
+                      </Typography>
+                    </Button>
                   </Card>
                   <br />
-                  <Card
-                    sx={{justifyContent: "center", marginLeft: "50px", width: "110px", backgroundColor: "#adc4ad"}}
-                  >
-
-                    <Button style={{marginLeft: "20px", textTransform: "lowercase"}}>
-                      <Link href={website.address}>
-                        live site
-                      </Link>
-                    {/* <Typography
-                      sx={{ justifyContent: "center", display: "flex" }}
+                  {website.address ? (
+                    <Card
+                      sx={{
+                        justifyContent: "center",
+                        marginLeft: "50px",
+                        width: "110px",
+                        backgroundColor: "#adc4ad",
+                      }}
                     >
-                      Live Site
-                    </Typography> */}
-                  </Button>
-
-                  </Card>
+                      <Button
+                        style={{
+                          marginLeft: "20px",
+                          textTransform: "lowercase",
+                        }}
+                      >
+                        <Link href={website.address}>live site</Link>
+                      </Button>
+                    </Card>
+                  ) : null}
 
                   <br />
                   <Typography>{website.description}</Typography>
