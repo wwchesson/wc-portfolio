@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import {
   Box,
   Typography,
@@ -12,6 +13,7 @@ import {
   Divider
 } from "@mui/material";
 import gawildlife from "./gawildlife.gif";
+import NavBar from "./NavBar"
 
 function App() {
   const [websites, setWebsites] = useState([]);
@@ -89,7 +91,7 @@ function App() {
                   height: "550px",
                   justifyContent: "center",
                 }}
-                style={{ backgroundColor: "#adc4ad" }}
+                style={{ backgroundColor: "#fbfc92" }}
               >
                 <CardMedia
                   component="img"
