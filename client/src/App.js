@@ -13,7 +13,8 @@ import {
   Divider
 } from "@mui/material";
 import gawildlife from "./gawildlife.gif";
-import NavBar from "./NavBar"
+import NavBar from "./NavBar";
+import About from "./About"
 
 function App() {
   const [websites, setWebsites] = useState([]);
@@ -38,6 +39,10 @@ function App() {
 <Divider sx={{backgroundColor: "white"}}>
       </Divider>
       </Box>
+
+      <Routes>
+        <Route path="/" element={<About />} />
+      </Routes>
 
 
       {gif ? (
