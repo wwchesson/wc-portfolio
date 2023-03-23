@@ -9,6 +9,7 @@ import {
   Container,
   Button,
   Link,
+  Divider
 } from "@mui/material";
 import gawildlife from "./gawildlife.gif";
 
@@ -24,15 +25,18 @@ function App() {
 
   return (
     <div className="App">
-      <Box sx={{ marginBottom: "80px" }}>
+      <Box sx={{ marginBottom: "50px" }}>
         <Card id="welcome-card">
-          <CardContent sx={{ margin: "auto", display: "flex" }}>
-            <Typography variant="h3" style={{ color: "white" }}>
-              <strong>Welcome to Will's Portfolio</strong>
+          <CardContent sx={{ marginTop: "10px"}}>
+            <Typography variant="h3" style={{ color: "white", fontFamily: "fantasy" }}>
+              <strong>WC</strong>
             </Typography>
           </CardContent>
         </Card>
+<Divider sx={{backgroundColor: "white"}}>
+      </Divider>
       </Box>
+
 
       {gif ? (
         <Card
