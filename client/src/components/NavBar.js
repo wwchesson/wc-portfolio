@@ -21,9 +21,10 @@ function NavBar() {
           flexGrow: 1,
           flexDirection: "row",
           display: "flex",
-        }}
+          borderBottom: 4,
+          borderColor: "white"      }}
       >
-        <Card id="welcome-card" sx={{ display: "flex" }}>
+        <Card id="welcome-card" sx={{ display: "flex", marginBottom: "1px" }}>
           <CardContent sx={{ marginTop: "10px", marginLeft: "10px", display: "flex" }}>
             <Typography
               variant="h3"
@@ -39,12 +40,12 @@ function NavBar() {
                 justifyContent: "space-evenly",
               }}
             >
-              <Typography sx={{ marginRight: "20px"}}>
+              <Typography variant="h6" sx={{ marginRight: "30px"}}>
                 <Link href="/about" style={{ color: "white", fontFamily: "fantasy" }}>
                   <strong>1. About</strong>
                 </Link>
               </Typography>
-              <Typography>
+              <Typography variant="h6">
                 <Link href="/seportfolio" style={{ color: "white", fontFamily: "fantasy" }}>
                   <strong>2. Portfolio</strong>
                 </Link>

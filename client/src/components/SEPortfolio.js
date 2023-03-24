@@ -61,7 +61,7 @@ function SEPortfolio() {
         </Card>
       ) : null}
 
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{marginTop: "80px"}}>
         <Grid container spacing={2}>
           {websites.map((website) => (
             <Grid item xs={12} sm={6} md={4}>

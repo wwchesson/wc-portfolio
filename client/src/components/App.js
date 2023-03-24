@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Divider sx={{ backgroundColor: "white", marginBottom: "40px" }}></Divider>
+
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/seportfolio" element={<SEPortfolio />}  />
