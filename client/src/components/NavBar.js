@@ -17,14 +17,14 @@ function NavBar() {
     <div>
       <Box
         sx={{
-        //   marginBottom: "50px",
+          marginBottom: "1px",
           flexGrow: 1,
           flexDirection: "row",
           display: "flex",
         }}
       >
         <Card id="welcome-card" sx={{ display: "flex" }}>
-          <CardContent sx={{ marginTop: "10px", marginLeft: "20px", display: "flex" }}>
+          <CardContent sx={{ marginTop: "10px", marginLeft: "10px", display: "flex" }}>
             <Typography
               variant="h3"
               style={{ color: "white", fontFamily: "fantasy" }}

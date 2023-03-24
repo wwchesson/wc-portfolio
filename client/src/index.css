@@ -25,4 +25,6 @@ code {
 
 #about{
   background-color: black;
+  /* height: 100vh; */
+  display: "flex"
 }
