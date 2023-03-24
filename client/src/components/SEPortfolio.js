@@ -128,7 +128,7 @@ function SEPortfolio({websites}) {
                           textTransform: "lowercase",
                         }}
                       >
-                        <Link href={website.address}>
+                        <Link href={website.address} target="_blank">
                           <Typography color="white">live site</Typography>
                         </Link>
                       </Button>
