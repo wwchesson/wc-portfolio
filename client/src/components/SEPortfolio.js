@@ -1,29 +1,29 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
-    Typography,
-    Card,
-    CardMedia,
-    CardContent,
-    Grid,
-    Container,
-    Button,
-    Link,
-  } from "@mui/material";
-  import portfoliobg from "../media/portfoliobg.gif"
+  Typography,
+  Card,
+  CardMedia,
+  CardContent,
+  Grid,
+  Container,
+  Button,
+  Link,
+} from "@mui/material";
+import portfoliobg from "../media/portfoliobg.gif";
 
 function SEPortfolio() {
-    const [websites, setWebsites] = useState([]);
-    const [gif, setGif] = useState(false);
+  const [websites, setWebsites] = useState([]);
+  const [gif, setGif] = useState(false);
 
-    useEffect(() => {
-      fetch("/websites")
-        .then((r) => r.json())
-        .then((data) => setWebsites(data));
-    }, []);
+  useEffect(() => {
+    fetch("/websites")
+      .then((r) => r.json())
+      .then((data) => setWebsites(data));
+  }, []);
 
-    return (
-        <div className="se-portfolio">
-             {gif ? (
+  return (
+    <div className="se-portfolio">
+      {gif ? (
         <Card
           sx={{
             display: "flex",
@@ -69,13 +69,16 @@ function SEPortfolio() {
               <Card
                 key={website.id}
                 sx={{
-                  marginBottom: "225px",
-                  marginLeft: "30px",
+                  marginRight: "25px",
+                  marginLeft: "25px",
                   marginTop: "50px",
                   height: "550px",
+                  border: 4,
+                  borderRadius: "16px",
+                  width: "250px",
                   justifyContent: "center",
                 }}
-                style={{ backgroundColor: "#fbfc92" }}
+                style={{ backgroundColor: "black" }}
               >
                 <CardMedia
                   component="img"
@@ -85,7 +88,11 @@ function SEPortfolio() {
                 <CardContent sx={{ justifyContent: "center", margin: "auto" }}>
                   {/* <a href={website.address} target="_blank"> */}
                   <Typography
-                    sx={{ justifyContent: "center", display: "flex" }}
+                    sx={{
+                      justifyContent: "center",
+                      display: "flex",
+                      color: "white",
+                    }}
                     variant="h6"
                   >
                     {website.name}
@@ -96,7 +103,7 @@ function SEPortfolio() {
                       marginTop: "10px",
                       marginLeft: "50px",
                       width: "110px",
-                      backgroundColor: "#adc4ad",
+                      backgroundColor: "grey",
                     }}
                   >
                     <Button
@@ -104,7 +111,11 @@ function SEPortfolio() {
                       onClick={() => setGif(website.gif)}
                     >
                       <Typography
-                        sx={{ justifyContent: "center", display: "flex" }}
+                        sx={{
+                          justifyContent: "center",
+                          display: "flex",
+                          color: "white",
+                        }}
                       >
                         See Gif
                       </Typography>
@@ -117,7 +128,7 @@ function SEPortfolio() {
                         justifyContent: "center",
                         marginLeft: "50px",
                         width: "110px",
-                        backgroundColor: "#adc4ad",
+                        backgroundColor: "grey",
                       }}
                     >
                       <Button
@@ -126,21 +137,23 @@ function SEPortfolio() {
                           textTransform: "lowercase",
                         }}
                       >
-                        <Link href={website.address}>live site</Link>
+                        <Link href={website.address}>
+                          <Typography color="white">live site</Typography>
+                        </Link>
                       </Button>
                     </Card>
                   ) : null}
 
                   <br />
-                  <Typography>{website.description}</Typography>
+                  <Typography color="white">{website.description}</Typography>
                 </CardContent>
               </Card>
             </Grid>
           ))}
         </Grid>
       </Container>
-        </div>
-    )
+    </div>
+  );
 }
 
-export default SEPortfolio
+export default SEPortfolio;
