@@ -15,14 +15,14 @@ code {
 }
 
 #welcome-card {
-
+  display: "flex";
   align-items: "center";
-  display: flex;
   background-color: black;
 }
 
 .App {
   background-color: black;
+
 }
 
 

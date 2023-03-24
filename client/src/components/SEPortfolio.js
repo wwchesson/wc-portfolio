@@ -11,15 +11,8 @@ import {
 } from "@mui/material";
 import portfoliobg from "../media/portfoliobg.gif";
 
-function SEPortfolio() {
-  const [websites, setWebsites] = useState([]);
+function SEPortfolio({websites}) {
   const [gif, setGif] = useState(false);
-
-  useEffect(() => {
-    fetch("/websites")
-      .then((r) => r.json())
-      .then((data) => setWebsites(data));
-  }, []);
 
   return (
     <div className="se-portfolio">
@@ -62,18 +55,19 @@ function SEPortfolio() {
         </Card>
       ) : null}
 
-      <Container maxWidth="md">
-        <Grid container spacing={2}>
+      <Container maxWidth="lg" sx={{justifyContent: "center", alignItems: "center"}}>
+        <Grid container spacing={1}>
           {websites.map((website) => (
             <Grid item xs={12} sm={6} md={4}>
               <Card
                 key={website.id}
                 sx={{
-                  marginRight: "25px",
-                  marginLeft: "25px",
-                  marginTop: "50px",
+                //   marginRight: "25px",
+                //   marginLeft: "30px",
+                  marginTop: "60px",
                   height: "550px",
                   border: 4,
+                  marginBottom: "70px",
                   borderRadius: "16px",
                   width: "250px",
                   justifyContent: "center",

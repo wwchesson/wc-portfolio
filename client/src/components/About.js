@@ -24,8 +24,8 @@ function About() {
                 sx={{
                   height: "300px",
                   width: "300px",
-                  border: 6,
-                  borderColor: "success.light",
+                  border: 15,
+                  borderColor: "white",
                 }}
               ></Avatar>
             </Box>
@@ -34,8 +34,8 @@ function About() {
             <Card
               sx={{
                 borderRadius: "16px",
-                border: 4,
-                borderColor: "success.light",
+                border: 15,
+                borderColor: "white",
                 backgroundColor: "black",
                 height: "350px",
                 width: "500px",
