@@ -13,13 +13,16 @@ code {
 }
 
 #welcome-card {
-  /* margin: auto; */
-  /* justify-content: center; */
+
   align-items: "center";
   display: flex;
   background-color: black;
 }
 
 .App {
+  background-color: black;
+}
+
+#about{
   background-color: black;
 }

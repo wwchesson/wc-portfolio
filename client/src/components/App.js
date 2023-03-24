@@ -8,14 +8,6 @@ import About from "./About"
 import SEPortfolio from "./SEPortfolio";
 
 function App() {
-  const [websites, setWebsites] = useState([]);
-  const [gif, setGif] = useState(false);
-
-  useEffect(() => {
-    fetch("/websites")
-      .then((r) => r.json())
-      .then((data) => setWebsites(data));
-  }, []);
 
   return (
     <div className="App">

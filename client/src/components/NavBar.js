@@ -24,7 +24,7 @@ function NavBar() {
         }}
       >
         <Card id="welcome-card" sx={{ display: "flex" }}>
-          <CardContent sx={{ marginTop: "10px", display: "flex" }}>
+          <CardContent sx={{ marginTop: "10px", marginLeft: "20px", display: "flex" }}>
             <Typography
               variant="h3"
               style={{ color: "white", fontFamily: "fantasy" }}
