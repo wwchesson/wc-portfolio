@@ -9,6 +9,7 @@ import {
     Button,
     Link,
   } from "@mui/material";
+  import portfoliobg from "../media/portfoliobg.gif"
 
 function SEPortfolio() {
     const [websites, setWebsites] = useState([]);
@@ -61,7 +62,7 @@ function SEPortfolio() {
         </Card>
       ) : null}
 
-      <Container maxWidth="md" sx={{marginTop: "80px"}}>
+      <Container maxWidth="md">
         <Grid container spacing={2}>
           {websites.map((website) => (
             <Grid item xs={12} sm={6} md={4}>
@@ -70,6 +71,7 @@ function SEPortfolio() {
                 sx={{
                   marginBottom: "225px",
                   marginLeft: "30px",
+                  marginTop: "50px",
                   height: "550px",
                   justifyContent: "center",
                 }}
