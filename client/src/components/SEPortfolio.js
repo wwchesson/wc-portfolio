@@ -1,51 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import React, {useState, useEffect} from "react";
 import {
-  Box,
-  Typography,
-  Card,
-  CardMedia,
-  CardContent,
-  Grid,
-  Container,
-  Button,
-  Link,
-  Divider
-} from "@mui/material";
-import gawildlife from "./gawildlife.gif";
-import NavBar from "./NavBar";
-import About from "./About"
+    Typography,
+    Card,
+    CardMedia,
+    CardContent,
+    Grid,
+    Container,
+    Button,
+    Link,
+  } from "@mui/material";
 
-function App() {
-  const [websites, setWebsites] = useState([]);
-  const [gif, setGif] = useState(false);
+function SEPortfolio() {
+    const [websites, setWebsites] = useState([]);
+    const [gif, setGif] = useState(false);
 
-  useEffect(() => {
-    fetch("/websites")
-      .then((r) => r.json())
-      .then((data) => setWebsites(data));
-  }, []);
+    useEffect(() => {
+      fetch("/websites")
+        .then((r) => r.json())
+        .then((data) => setWebsites(data));
+    }, []);
 
-  return (
-    <div className="App">
-      <Box sx={{ marginBottom: "50px" }}>
-        <Card id="welcome-card">
-          <CardContent sx={{ marginTop: "10px"}}>
-            <Typography variant="h3" style={{ color: "white", fontFamily: "fantasy" }}>
-              <strong>WC</strong>
-            </Typography>
-          </CardContent>
-        </Card>
-<Divider sx={{backgroundColor: "white"}}>
-      </Divider>
-      </Box>
-
-      <Routes>
-        <Route path="/" element={<About />} />
-      </Routes>
-
-
-      {gif ? (
+    return (
+        <div className="se-portfolio">
+             {gif ? (
         <Card
           sx={{
             display: "flex",
@@ -160,8 +137,8 @@ function App() {
           ))}
         </Grid>
       </Container>
-    </div>
-  );
+        </div>
+    )
 }
 
-export default App;
+export default SEPortfolio
