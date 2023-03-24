@@ -23,7 +23,7 @@ function SEPortfolio({websites}) {
             height: "400px",
             width: "500px",
             margin: "auto",
-            marginBottom: "90px",
+            marginBottom: "60px",
           }}
         >
           <CardContent
@@ -55,19 +55,16 @@ function SEPortfolio({websites}) {
         </Card>
       ) : null}
 
-      <Container maxWidth="lg" sx={{justifyContent: "center", alignItems: "center"}}>
-        <Grid container spacing={1}>
+      <Container maxWidth="xlg" >
+        <Grid container spacing={1} >
           {websites.map((website) => (
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={4} sx={{height: "100vh", marginTop: "75px" }}>
               <Card
                 key={website.id}
                 sx={{
-                //   marginRight: "25px",
-                //   marginLeft: "30px",
-                  marginTop: "60px",
                   height: "550px",
                   border: 4,
-                  marginBottom: "70px",
+                  margin: "auto",
                   borderRadius: "16px",
                   width: "250px",
                   justifyContent: "center",
