@@ -1,23 +1,29 @@
 import React from "react";
 import {
-    Box,
-    Typography,
-    Card,
-    CardMedia,
-    CardContent,
-    Grid,
-    Container,
-    Button,
-    Link,
-    Divider
-  } from "@mui/material";
-
+  Box,
+  Typography,
+  Card,
+  CardMedia,
+  CardContent,
+  Grid,
+  Container,
+  Button,
+  Link,
+  Divider,
+} from "@mui/material";
 
 function NavBar() {
   return (
     <div>
-      <Box sx={{ marginBottom: "50px" }}>
-        <Card id="welcome-card">
+      <Box
+        sx={{
+        //   marginBottom: "50px",
+          flexGrow: 1,
+          flexDirection: "row",
+          display: "flex",
+        }}
+      >
+        <Card id="welcome-card" sx={{ display: "flex" }}>
           <CardContent sx={{ marginTop: "10px", display: "flex" }}>
             <Typography
               variant="h3"
@@ -25,15 +31,27 @@ function NavBar() {
             >
               <strong>WC</strong>
             </Typography>
-            <Typography sx={{position: "absolute", right: "20px"}}>
-                <Link href="/about">
-            1. About
-            </Link>
-            </Typography>
-
+            <Box
+              sx={{
+                display: "flex",
+                position: "absolute",
+                right: "20px",
+                justifyContent: "space-evenly",
+              }}
+            >
+              <Typography sx={{ marginRight: "20px"}}>
+                <Link href="/about" style={{ color: "white", fontFamily: "fantasy" }}>
+                  <strong>1. About</strong>
+                </Link>
+              </Typography>
+              <Typography>
+                <Link href="/seportfolio" style={{ color: "white", fontFamily: "fantasy" }}>
+                  <strong>2. Portfolio</strong>
+                </Link>
+              </Typography>
+            </Box>
           </CardContent>
         </Card>
-        <Divider sx={{ backgroundColor: "white" }}></Divider>
       </Box>
     </div>
   );
