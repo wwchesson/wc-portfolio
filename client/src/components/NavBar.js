@@ -47,7 +47,7 @@ function NavBar() {
             </Typography>
             <Typography variant="h6">
               <Link
-                href="/seportfolio"
+                href="/"
                 style={{ color: "white", fontFamily: "fantasy", marginRight: "15px" }}
               >
                 <strong>2. Portfolio</strong>

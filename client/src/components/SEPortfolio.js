@@ -16,6 +16,7 @@ function SEPortfolio({websites}) {
 
   return (
     <div className="se-portfolio">
+
       {gif ? (
         <Card
           sx={{
@@ -23,6 +24,7 @@ function SEPortfolio({websites}) {
             height: "400px",
             width: "500px",
             margin: "auto",
+            padding: "20px",
             marginBottom: "60px",
           }}
         >
@@ -58,15 +60,15 @@ function SEPortfolio({websites}) {
       <Container maxWidth="xlg" >
         <Grid container spacing={1} >
           {websites.map((website) => (
-            <Grid item xs={12} sm={6} md={4} sx={{height: "100vh", marginTop: "75px" }}>
+            <Grid item xs={12} sm={6} md={4} sx={{height: "100vh", marginTop: "75px" }}
+            key={website.id}>
               <Card
-                key={website.id}
                 sx={{
-                  height: "550px",
+                  height: "625px",
                   border: 4,
                   margin: "auto",
                   borderRadius: "16px",
-                  width: "250px",
+                  width: "275px",
                   justifyContent: "center",
                 }}
                 style={{ backgroundColor: "black" }}
@@ -137,6 +139,8 @@ function SEPortfolio({websites}) {
 
                   <br />
                   <Typography color="white">{website.description}</Typography>
+                  <br />
+                  <Typography color="white">Technologies: {website.technologies}</Typography>
                 </CardContent>
               </Card>
             </Grid>

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import {
-  Grid, Typography, Card, CardContent
-} from "@mui/material";
-import portfoliobg from "../media/portfoliobg.gif"
+import { Grid, Typography, Card, CardContent } from "@mui/material";
+import portfoliobg from "../media/portfoliobg.gif";
 import NavBar from "./NavBar";
-import About from "./About"
+import About from "./About";
 import SEPortfolio from "./SEPortfolio";
 
 function App() {
@@ -18,21 +16,20 @@ function App() {
       .then((data) => setWebsites(data));
   }, []);
 
-
   return (
     <div className="App">
       <NavBar />
 
-      <Grid sx={{backgroundImage: `url(${portfoliobg})`}}>
+      <Grid sx={{ backgroundImage: `url(${portfoliobg})` }}>
         <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/seportfolio" element={<SEPortfolio websites={websites}/>}  />
-      </Routes>
+          <Route
+            path="/"
+            element={<SEPortfolio websites={websites} />}
+          />
+
+          <Route path="/about" element={<About />} />
+        </Routes>
       </Grid>
-
-
-
-
     </div>
   );
 }
