@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Grid, Typography, Card, CardContent } from "@mui/material";
+import { Grid } from "@mui/material";
 import portfoliobg from "../media/portfoliobg.gif";
 import NavBar from "./NavBar";
 import About from "./About";
 import SEPortfolio from "./SEPortfolio";
+import { GoMarkGithub } from "react-icons/go";
+import { BsLinkedin } from "react-icons/bs";
 
 function App() {
   const [websites, setWebsites] = useState([]);
@@ -20,7 +22,7 @@ function App() {
     <div className="App">
       <NavBar />
 
-      <Grid sx={{ backgroundImage: `url(${portfoliobg})` }}>
+      <Grid sx={{ backgroundImage: `url(${portfoliobg})`, heigh: "100vh" }}>
         <Routes>
           <Route
             path="/"

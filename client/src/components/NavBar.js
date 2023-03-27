@@ -11,6 +11,8 @@ import {
   Link,
   Divider,
 } from "@mui/material";
+import { GoMarkGithub } from "react-icons/go";
+import { BsLinkedin } from "react-icons/bs";
 
 function NavBar() {
   return (
@@ -48,11 +50,29 @@ function NavBar() {
             <Typography variant="h6">
               <Link
                 href="/"
-                style={{ color: "white", fontFamily: "fantasy", marginRight: "15px" }}
+                style={{
+                  color: "white",
+                  fontFamily: "fantasy",
+                  marginRight: "15px",
+                }}
               >
                 <strong>2. Portfolio</strong>
               </Link>
             </Typography>
+            <Link
+              href="https://github.com/wwchesson"
+              target="_blank"
+              sx={{ fontSize: "x-large", color: "white", margin: "5px" }}
+            >
+              <GoMarkGithub />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/will-chesson-484457127/"
+              target="_blank"
+              sx={{ fontSize: "x-large", color: "white", marginLeft: "10px", marginTop: "5px" }}
+            >
+              <BsLinkedin />
+            </Link>
           </Box>
         </CardContent>
       </Card>
