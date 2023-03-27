@@ -60,7 +60,7 @@ function SEPortfolio({websites}) {
       <Container maxWidth="xlg" >
         <Grid container spacing={1} >
           {websites.map((website) => (
-            <Grid item xs={12} sm={6} md={4} sx={{height: "100vh", marginTop: "75px" }}
+            <Grid item xs={12} sm={6} md={4} sx={{height: "100vh", marginTop: "75px", marginBottom: "40px" }}
             key={website.id}>
               <Card
                 sx={{
@@ -79,7 +79,6 @@ function SEPortfolio({websites}) {
                   height="250"
                 ></CardMedia>
                 <CardContent sx={{ justifyContent: "center", margin: "auto" }}>
-                  {/* <a href={website.address} target="_blank"> */}
                   <Typography
                     sx={{
                       justifyContent: "center",
