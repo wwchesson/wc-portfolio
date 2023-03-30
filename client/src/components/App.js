@@ -27,7 +27,7 @@ function App() {
             element={<SEPortfolio websites={websites} />}
           />
 
-          <Route path="/about" element={<About />} />
+          <Route path="/aboutme" element={<About />} />
         </Routes>
       </Grid>
     </div>
