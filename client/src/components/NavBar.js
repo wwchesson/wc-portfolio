@@ -36,7 +36,7 @@ function NavBar() {
           >
             <Typography variant="h6" sx={{ marginRight: "30px" }}>
               <Link
-                href="/about"
+                href="/aboutme"
                 style={{ color: "white", fontFamily: "fantasy" }}
               >
                 <strong>1. About</strong>
