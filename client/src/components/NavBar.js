@@ -3,13 +3,8 @@ import {
   Box,
   Typography,
   Card,
-  CardMedia,
   CardContent,
-  Grid,
-  Container,
-  Button,
   Link,
-  Divider,
 } from "@mui/material";
 import { GoMarkGithub } from "react-icons/go";
 import { BsLinkedin } from "react-icons/bs";

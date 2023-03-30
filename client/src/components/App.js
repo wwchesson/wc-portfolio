@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <NavBar />
 
-      <Grid sx={{ backgroundImage: `url(${portfoliobg})`, heigh: "100vh" }}>
+      <Grid sx={{ backgroundImage: `url(${portfoliobg})`, height: "100vh" }}>
         <Routes>
           <Route
             path="/"
