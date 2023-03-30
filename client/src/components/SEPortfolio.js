@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Typography,
   Card,
@@ -9,7 +9,6 @@ import {
   Button,
   Link,
 } from "@mui/material";
-import portfoliobg from "../media/portfoliobg.gif";
 
 function SEPortfolio({websites}) {
   const [gif, setGif] = useState(false);

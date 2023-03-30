@@ -5,12 +5,10 @@ import portfoliobg from "../media/portfoliobg.gif";
 import NavBar from "./NavBar";
 import About from "./About";
 import SEPortfolio from "./SEPortfolio";
-import { GoMarkGithub } from "react-icons/go";
-import { BsLinkedin } from "react-icons/bs";
+
 
 function App() {
   const [websites, setWebsites] = useState([]);
-  const [gif, setGif] = useState(false);
 
   useEffect(() => {
     fetch("/websites")
