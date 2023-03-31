@@ -1,10 +1,10 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import {
   Box,
   Typography,
   Card,
   CardContent,
-  Link,
 } from "@mui/material";
 import { GoMarkGithub } from "react-icons/go";
 import { BsLinkedin } from "react-icons/bs";
@@ -36,7 +36,7 @@ function NavBar() {
           >
             <Typography variant="h6" sx={{ marginRight: "30px" }}>
               <Link
-                href="/aboutme"
+                to="/aboutme"
                 style={{ color: "white", fontFamily: "fantasy" }}
               >
                 <strong>1. About</strong>
@@ -44,7 +44,7 @@ function NavBar() {
             </Typography>
             <Typography variant="h6">
               <Link
-                href="/"
+                to="/"
                 style={{
                   color: "white",
                   fontFamily: "fantasy",
@@ -55,16 +55,16 @@ function NavBar() {
               </Link>
             </Typography>
             <Link
-              href="https://github.com/wwchesson"
+              to="https://github.com/wwchesson"
               target="_blank"
-              sx={{ fontSize: "x-large", color: "white", margin: "5px" }}
+              style={{ fontSize: "x-large", color: "white", margin: "5px" }}
             >
               <GoMarkGithub />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/will-chesson-484457127/"
+              to="https://www.linkedin.com/in/will-chesson-484457127/"
               target="_blank"
-              sx={{ fontSize: "x-large", color: "white", marginLeft: "10px", marginTop: "5px" }}
+              style={{ fontSize: "x-large", color: "white", marginLeft: "10px", marginTop: "5px" }}
             >
               <BsLinkedin />
             </Link>
