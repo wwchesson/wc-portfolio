@@ -9,6 +9,8 @@ import {
   Button,
   Link,
 } from "@mui/material";
+import portfoliobg from "../media/portfoliobg.gif";
+
 
 function SEPortfolio({websites}) {
   const [gif, setGif] = useState(false);
@@ -56,10 +58,10 @@ function SEPortfolio({websites}) {
         </Card>
       ) : null}
 
-      <Container maxWidth="xlg" >
-        <Grid container spacing={1} >
+      <Container maxWidth="xlg" sx={{ backgroundImage: `url(${portfoliobg})`, height: "100vh", backgroundSize: "100vh"}}>
+        <Grid container spacing={1} sx={{height: "100vh"}}>
           {websites.map((website) => (
-            <Grid item xs={12} sm={6} md={4} sx={{height: "100vh", marginTop: "75px", marginBottom: "40px" }}
+            <Grid item xs={12} sm={6} md={4} sx={{ marginTop: "75px",  marginBottom: "75px"}}
             key={website.id}>
               <Card
                 sx={{
