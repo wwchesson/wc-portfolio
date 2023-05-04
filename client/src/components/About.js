@@ -15,32 +15,34 @@ function About() {
   return (
     <div className="about">
       <Container>
-        <Grid container spacing={2} sx={{ display: "flex", height: "100vh" }}>
-          <Grid item xs={12} sm={6} md={4} sx={{ display: "flex" }}>
-            <Box sx={{ marginTop: "105px", marginLeft: "50px" }}>
+        <Grid container sx={{ display: "flex", flexDirection: "column", justifyContent: "center", margin: "auto" }}>
+          <Grid item  sx={{ display: "flex" }}>
+            <Box sx={{ margin: "auto", marginBottom: "3rem", marginTop: "3rem" }}>
               <Avatar
                 alt="aboutpic"
                 src={AboutPic}
                 sx={{
-                  height: "300px",
-                  width: "300px",
+                  height: "50vh",
+                  width: "50vw",
                   border: 15,
                   borderColor: "white",
                 }}
               ></Avatar>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid >
             <Card
               sx={{
                 borderRadius: "16px",
                 border: 15,
                 borderColor: "white",
                 backgroundColor: "black",
-                height: "350px",
-                width: "500px",
-                marginTop: "80px",
-                marginLeft: "100px",
+                display: "flex",
+                height: "45vh",
+                width: "80vw",
+                overflow: "scroll",
+                margin: "auto",
+                marginBottom: "3rem"
               }}
             >
               <CardContent

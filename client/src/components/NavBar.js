@@ -31,7 +31,7 @@ function NavBar() {
   return (
     <div className="navbar">
 
-      <Card id="welcome-card" sx={{ display: "flex", height: "90px" }}>
+      <Card id="welcome-card" sx={{ display: "flex", height: "90px", width: "100vw" }}>
         <CardContent sx={{ marginTop: "1px", display: "flex", justifyItems: "center" }}>
           <Button onClick={handleOpen}>
             <Link style={{ fontSize: "3rem", color: "white" }}>
@@ -55,10 +55,8 @@ function NavBar() {
         sx={{
           backgroundColor: "black",
           marginLeft: "1rem",
-          // position: "absolute",
           marginTop: "0.5rem",
           fontFamily: "fantasy",
-          // padding: "1rem"
         }}
         color="white"
         variant="h5"
