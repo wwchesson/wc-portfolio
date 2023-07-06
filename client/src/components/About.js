@@ -10,8 +10,13 @@ import {
   CardContent,
 } from "@mui/material";
 import AboutPic from "../media/AboutPic.jpg";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 function About() {
+
+const isFullScreen = useMediaQuery("only screen and (min-width: 800px)")
+
+
   return (
     <div className="about">
       <Container>
@@ -21,9 +26,14 @@ function About() {
               <Avatar
                 alt="aboutpic"
                 src={AboutPic}
-                sx={{
+                sx={ isFullScreen ? {
+                  height: "65vh",
+                  width: "55vw",
+                  border: 15,
+                  borderColor: "white",
+                } : {
                   height: "50vh",
-                  width: "50vw",
+                  width: "60vw",
                   border: 15,
                   borderColor: "white",
                 }}
@@ -32,7 +42,18 @@ function About() {
           </Grid>
           <Grid >
             <Card
-              sx={{
+              sx={isFullScreen ? {
+                borderRadius: "16px",
+                border: 15,
+                borderColor: "white",
+                backgroundColor: "black",
+                display: "flex",
+                height: "35vh",
+                width: "70vw",
+                overflow: "scroll",
+                margin: "auto",
+                marginBottom: "3rem"
+              } : {
                 borderRadius: "16px",
                 border: 15,
                 borderColor: "white",
@@ -43,7 +64,7 @@ function About() {
                 overflow: "scroll",
                 margin: "auto",
                 marginBottom: "3rem"
-              }}
+              } }
             >
               <CardContent
                 sx={{
