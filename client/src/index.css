@@ -37,3 +37,9 @@ code {
   /* height: 100vh; */
   display: "flex";
 }
+
+.about-pic {
+  height: "65vh";
+  width: "55vw";
+  border: 4rem solid white;
+}

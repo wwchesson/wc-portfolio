@@ -10,7 +10,7 @@ import {
   CardContent,
 } from "@mui/material";
 import AboutPic from "../media/AboutPic.jpg";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function About() {
 
@@ -32,11 +32,13 @@ const isFullScreen = useMediaQuery("only screen and (min-width: 800px)")
                   border: 15,
                   borderColor: "white",
                 } : {
-                  height: "50vh",
-                  width: "60vw",
+                  height: "45vh",
+                  width: "65vw",
                   border: 15,
                   borderColor: "white",
                 }}
+
+
               ></Avatar>
             </Box>
           </Grid>
